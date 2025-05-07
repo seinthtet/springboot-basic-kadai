@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spring_Kadai_Todo</title>
+</head>
+
+<body>
+    
+    <h2>ToDoリスト</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>タイトル</th>
+                <th>優先度</th>
+				<th>ステータス</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="todo : ${todoList}">
+                <td th:text="${todo.id}"></td>
+                <td th:text="${todo.title}"></td>
+				<td th:text="${todo.priority}"></td>
+				<td th:text="${todo.status}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
