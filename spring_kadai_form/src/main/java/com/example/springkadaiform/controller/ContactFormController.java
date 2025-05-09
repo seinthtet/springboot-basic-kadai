@@ -14,7 +14,7 @@ import com.example.springkadaiform.form.ContactForm;
 @Controller
 public class ContactFormController {
 
-	@GetMapping("/contact")
+	@GetMapping("/form")
     public String showForm(ContactForm contactForm) {
         return "contactFormView";
     }
